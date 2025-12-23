@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000814">
+  <meta name="description" content="Kioskeys - La manera más inteligente de gestionar tus copias de llaves. Servicios de duplicado, telemandos y cerrajería profesional.">
+  <meta name="keywords" content="llaves, cerrajería, telemandos, duplicados, seguridad, cerrajero">
+  <meta property="og:title" content="Kioskeys - Tus llaves seguras siempre">
+  <meta property="og:description" content="La manera más inteligente de gestionar tus copias de llaves">
+  <meta property="og:image" content="/og-image.jpg">
+  <meta property="og:url" content="https://kioskeys.com">
+  <title>Kioskeys - Tus Llaves Seguras Siempre</title>
+  <link rel="icon" href="/favicon.jpg" sizes="64x64">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background: radial-gradient(circle at top, #00172d 0%, #000814 70%, #000 100%);
+      color: #e0f0ff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .video-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+      overflow: hidden;
+    }
+
+    .video-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(0, 150, 255, 0.3);
+      border: 1px solid rgba(0, 150, 255, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: rgba(0, 10, 20, 0.85);
+      height: 100%;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 40px rgba(0, 150, 255, 0.6);
+    }
+
+    .video-card-content {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+    }
+
+    .video-card video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      .video-gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .video-gallery-grid {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        padding: 24px 16px 32px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .video-card {
+        flex: 0 0 85%;
+        min-width: 260px;
+        scroll-snap-align: center;
+      }
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 15px rgba(0, 150, 255, 0.3);
+    }
+
+    footer {
+      background: #000814;
+      border-top: 1px solid rgba(0, 150, 255, 0.2);
+      color: #b0cfff;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="./index.html">
+        <img src="https://ucarecdn.com/bdf174c8-8731-47fa-a3f9-2443689099be/logokioskey.png" alt="Kioskeys" class="nav-logo-img">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="./index.html" class="shiny-text"><i class="fas fa-home"></i> <span>Inicio</span></a>
+      <a href="./pages/red-servicios.html" class="shiny-text"><i class="fas fa-map-marker-alt"></i> <span>Red de Servicios</span></a>
+      <a href="./pages/planes.html" class="shiny-text"><i class="fas fa-crown"></i> <span>Planes</span></a>
+      <a href="./pages/productos.html" class="shiny-text"><i class="fas fa-box"></i> <span>Productos</span></a>
+      <a href="./pages/faq.html" class="shiny-text"><i class="fas fa-question-circle"></i> <span>FAQ</span></a>
+      <a href="./pages/contacto.html" class="shiny-text"><i class="fas fa-envelope"></i> <span>Contacto</span></a>
+      <a href="./pages/descarga-app.html" class="shiny-text"><i class="fas fa-mobile-alt"></i> <span>Descarga App</span></a>
+    </div>
+    <button class="menu-button">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-logo">
+          <img src="https://ucarecdn.com/bdf174c8-8731-47fa-a3f9-2443689099be/logokioskey.png" alt="Kioskeys Logo">
+        </div>
+        <h1 class="shiny-text">Tus llaves seguras siempre</h1>
+        <p>La manera más inteligente de gestionar tus copias de llaves</p>
+      </div>
+    </section>
+
+    <!-- 📹 Sección de videos dinámica -->
+    <section class="video-gallery-section">
+      <div class="content-container">
+        <h2 class="video-gallery-title shiny-text">Conocé KiosKeys en acción</h2>
+        <div class="videos-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="main-content">
+      <div class="content-container">
+        <a href="./pages/como-funciona.html" class="tutorial-button shiny-button">
+          <i class="fas fa-info-circle"></i>
+          <span class="shiny-text">¿Cómo funciona Kioskeys?</span>
+        </a>
+
+        <div class="features-grid">
+          <a href="./pages/planes.html" class="feature-card shiny-button">
+            <div>
+              <i class="fas fa-crown feature-icon"></i>
+              <h3 class="shiny-text">Elegí tu plan</h3>
+              <p>Planes flexibles que se adaptan a tus necesidades</p>
+            </div>
+          </a>
+
+          <a href="./pages/productos.html" class="feature-card shiny-button">
+            <div>
+              <i class="fas fa-car feature-icon"></i>
+              <h3 class="shiny-text">Nuestros productos</h3>
+              <p>Telemandos, llaves y carcasas de automóvil</p>
+            </div>
+          </a>
+
+          <a href="./pages/red-servicios.html" class="feature-card shiny-button">
+            <div>
+              <i class="fas fa-map-marker-alt feature-icon"></i>
+              <h3 class="shiny-text">Red de servicios</h3>
+              <p>Encuentra el punto de servicio más cercano</p>
+            </div>
+          </a>
+
+          <a href="./pages/planes.html#pagos" class="feature-card shiny-button">
+            <div>
+              <i class="fas fa-credit-card feature-icon"></i>
+              <h3 class="shiny-text">Formas de pago</h3>
+              <p>Múltiples opciones de pago disponibles</p>
+            </div>
+          </a>
+        </div>
+
+        <a href="./pages/tutoriales.html" class="tutorial-button shiny-button">
+          <i class="fas fa-play-circle"></i>
+          <span class="shiny-text">Tutoriales</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 class="shiny-text">Empresa</h4>
+        <ul class="footer-links">
+          <li><a href="/pages/sobre-nosotros.html" class="shiny-text">Sobre Nosotros</a></li>
+          <li><a href="/pages/red-servicios.html" class="shiny-text">Red de Servicios</a></li>
+          <li><a href="/pages/trabaja-con-nosotros.html" class="shiny-text">Trabaja con Nosotros</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="shiny-text">Servicios</h4>
+        <ul class="footer-links">
+          <li><a href="/pages/productos.html" class="shiny-text">Productos</a></li>
+          <li><a href="/pages/telemandos.html" class="shiny-text">Telemandos</a></li>
+          <li><a href="/pages/planes.html" class="shiny-text">Planes</a></li>
+          <li><a href="/pages/cerrajeria.html" class="shiny-text">Cerrajería</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="shiny-text">Soporte</h4>
+        <ul class="footer-links">
+          <li><a href="/pages/contacto.html" class="shiny-text">Contacto</a></li>
+          <li><a href="/pages/faq.html" class="shiny-text">FAQ</a></li>
+          <li><a href="/pages/tutoriales.html" class="shiny-text">Tutoriales</a></li>
+          <li><a href="/pages/ayuda.html" class="shiny-text">Centro de Ayuda</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="shiny-text">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="/pages/privacidad.html" class="shiny-text">Política de Privacidad</a></li>
+          <li><a href="/pages/terminos.html" class="shiny-text">Términos y Condiciones</a></li>
+          <li><a href="/pages/cookies.html" class="shiny-text">Política de Cookies</a></li>
+          <li><a href="/pages/legal.html" class="shiny-text">Aviso Legal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="shiny-text">Síguenos</h4>
+        <div class="footer-social">
+          <a href="https://facebook.com/kioskeys" target="_blank" rel="noopener" class="shiny-button"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/kioskeys" target="_blank" rel="noopener" class="shiny-button"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/kioskeys" target="_blank" rel="noopener" class="shiny-button"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/kioskeys" target="_blank" rel="noopener" class="shiny-button"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="shiny-text">&copy; 2025 Kioskeys. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/env.js"></script>
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/index-dynamic.js"></script>
+  <script type="module" src="/src/pages/videos-loader.js"></script>
+</body>
+</html>
